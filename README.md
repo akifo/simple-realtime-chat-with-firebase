@@ -1,5 +1,17 @@
 # Firebase を使った簡単なリアルタイムチャットのサンプルコードです。
 
+## 使い方
+
+### 手動ダウンロード・解答
+https://github.com/akifo/simple-realtime-chat-with-firebase/archive/master.zip
+
+### コマンド
+
+```bash
+git clone git@github.com:akifo/simple-realtime-chat-with-firebase.git
+```
+
+
 ## 注意点
 Firebaseを学習するjavascript初心者向けのサンプルコードです。  
 参考にして欲しくない点のリストアップです。
