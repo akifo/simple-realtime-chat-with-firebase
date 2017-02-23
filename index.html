@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Realtime Chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="box">
+    <h1>グループ</h1>
+    <div id="roomList"></div>
+    <form id="newRoom">
+      <input id="newRoomName" type="text" placeholder="新規ルーム">
+      <button type="submit">追加</button>
+    </form>
+  </div>
+
+  <div class="box">
+    <h1>メッセージ</h1>
+    <div id="messageList"></div>
+    <form id="newMessageForm">
+      <input id="newMessage" type="text" placeholder="メッセージ">
+      <button type="submit">送信</button>
+    </form>
+  </div>
+
+  <div class="box">
+    <h1>ユーザー情報</h1>
+    <div id="userInfo"></div>
+    <form id="signIn">
+      <input id="signInEmail" type="email" placeholder="メールアドレス">
+      <input id="signInPass" type="password" placeholder="パスワード">
+      <button type="submit">新規登録</button>
+    </form>
+    <form id="login">
+      <input id="loginEmail" type="email" placeholder="メールアドレス" required>
+      <input id="loginPass" type="password" placeholder="パスワード" required>
+      <button type="submit">ログイン</button>
+    </form>
+    <p id="logout">ログアウト</p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyAUcw2gy3MLolYrJDsgIWDYM1DFXGB5q6A",
+      authDomain: "techacademy-realtime-chat.firebaseapp.com",
+      databaseURL: "https://techacademy-realtime-chat.firebaseio.com",
+      storageBucket: "techacademy-realtime-chat.appspot.com",
+      messagingSenderId: "203356635346"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/user.js"></script>
+  <script src="js/rooms.js"></script>
+  <script src="js/messages.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
