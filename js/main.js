@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
 
   User.initUserForms();
   User.onAuthStateChanged();

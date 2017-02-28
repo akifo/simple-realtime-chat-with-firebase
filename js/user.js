@@ -6,17 +6,17 @@ User = {
   -------------------------------------------------------------------- */
   initUserForms: function () {
 
-    $('#signIn').submit(function() {
+    $('#signIn').submit(function () {
       User.signIn();
       return false;
     });
 
-    $('#login').submit(function() {
+    $('#login').submit(function () {
       User.login();
       return false;
     });
 
-    $('#logout').on('click', function() {
+    $('#logout').on('click', function () {
       User.logout();
       return false;
     });
@@ -29,12 +29,12 @@ User = {
 
     var $div = document.createElement('div');
 
-    firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function (user) {
       if (user) { // ログイン中
 
         User.uid = user.uid;
 
-        $div.innerHTML = `UID: ${user.uid}  <br> email: ${user.email}`;
+        $div.innerHTML = 'UID: ' + user.uid + '<br> email:' + user.email;
         $('#userInfo').append($div);
 
         Rooms.fetchRooms();
@@ -58,7 +58,7 @@ User = {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .catch(function(err) {
+      .catch(function (err) {
         console.error('新規登録失敗', err);
       });
 
@@ -72,7 +72,7 @@ User = {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .catch(function(err) {
+      .catch(function (err) {
         console.error('ログイン失敗', err);
       });
 
@@ -83,10 +83,10 @@ User = {
     firebase
       .auth()
       .signOut()
-      .catch(function(err) {
-        console.error("ログアウト失敗:", err);
+      .catch(function (err) {
+        console.error('ログアウト失敗:', err);
       });
 
   }
 
-}
+};
