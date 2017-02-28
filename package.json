@@ -1,0 +1,16 @@
+{
+  "name": "simple-realtime-chat-with-firebase",
+  "version": "0.0.1",
+  "description": "How to Use Firebase",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "lint": "eslint js"
+  },
+  "author": "Akiho Nagao <akiho.nagao@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
