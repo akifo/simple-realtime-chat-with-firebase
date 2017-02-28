@@ -1,10 +1,18 @@
 {
-  "root": true,
-  "parser": "babel-eslint",
-  "extends": "vue",
-  "plugins": ["flow-vars"],
+  "extends": "airbnb-base/legacy",
+  "globals": {
+    "firebase": true,
+    "$": true,
+    "User": true,
+    "Messages": true,
+    "Rooms": true
+  },
   "rules": {
-    "flow-vars/define-flow-type": 1,
-    "flow-vars/use-flow-type": 1
+    "camelcase": [2, {"properties": "never"}],
+    "func-names": ["error", "never"],
+    "padded-blocks": 0,
+    "no-console": 0,
+    "no-multiple-empty-lines": [1, { "max": 2 }],
+    "no-underscore-dangle": 0
   }
 }
